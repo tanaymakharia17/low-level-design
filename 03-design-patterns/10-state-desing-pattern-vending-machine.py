@@ -67,7 +67,9 @@ class VendingMachine:
         self.out_of_stock_state = OutOfStockState()
         self.state = self.idle_state
     def set_state(self, state): self.state = state
-    def insert_coin(self, amount): self.state.insert_coin(self, amount)
+    def insert_coin(self, amount): 
+        self.state.insert_coin(self, amount)
+        
     def select_product(self, product): self.state.select_product(self, product)
     def dispense(self): self.state.dispense(self)
 
